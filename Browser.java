@@ -12,6 +12,7 @@ public class Browser {
 
         browser.goBackward();
         browser.goForward();
+        browser.goBackward();
         browser.printCurrPage();
     }
 
@@ -28,19 +29,19 @@ public class Browser {
     }
 
     void goForward(){
-        if(tempStack.size>0){
+        if(tempStack.size>=0){
             mainStack.push(tempStack.pop());
         }
-        if(tempStack.size<0){
+        else{
             System.out.println("Can not go forward");
         }
     }
 
     void goBackward(){
-        if(mainStack.size>0){
+        if(mainStack.size>=0){
             tempStack.push(mainStack.pop());
         }
-        if(mainStack.size<0){
+        else{
             System.out.println("Can not go backward");
         }
     }
