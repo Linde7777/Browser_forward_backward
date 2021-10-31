@@ -9,6 +9,7 @@ public class Browser {
 
         browser.goForward();
         browser.goBackward();
+        browser.goForward();
         browser.printCurrPage();
     }
 
