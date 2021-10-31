@@ -7,7 +7,6 @@ public class Browser {
         browser.open("b.com");
         browser.open("c.com");
 
-        browser.goForward();
         browser.goBackward();
         browser.goForward();
         browser.printCurrPage();
@@ -26,11 +25,11 @@ public class Browser {
     }
 
     void goForward(){
-        tempStack.push(mainStack.pop());
+        mainStack.push(tempStack.pop());
     }
 
     void goBackward(){
-        mainStack.push(tempStack.pop());
+        tempStack.push(mainStack.pop());
     }
 
     void printCurrPage(){
