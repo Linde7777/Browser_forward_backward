@@ -6,6 +6,7 @@ public class Browser {
         browser.open("a.com");
         browser.open("b.com");
         browser.open("c.com");
+        browser.open("d.com");
 
         browser.goBackward();
         browser.goForward();
