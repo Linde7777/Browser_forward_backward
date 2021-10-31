@@ -1,5 +1,7 @@
 import java.util.LinkedList;
 
+import javax.swing.plaf.synth.SynthToggleButtonUI;
+
 public class Browser {
     public static void main(String[] args){
         var browser=new Browser();
@@ -26,11 +28,19 @@ public class Browser {
     }
 
     void goForward(){
-        mainStack.push(tempStack.pop());
+        if(tempStack.size>0){
+            mainStack.push(tempStack.pop());
+        } else {
+            System.out.println("Can not go forward");
+        }
     }
 
     void goBackward(){
-        tempStack.push(mainStack.pop());
+        if(mainStack.size>0){
+            tempStack.push(mainStack.pop());
+        } else {
+            System.out.println("Can not go backward");
+        }
     }
 
     void printCurrPage(){
