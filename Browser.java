@@ -30,7 +30,8 @@ public class Browser {
     void goForward(){
         if(tempStack.size>0){
             mainStack.push(tempStack.pop());
-        } else {
+        }
+        if(tempStack.size<0){
             System.out.println("Can not go forward");
         }
     }
@@ -38,7 +39,8 @@ public class Browser {
     void goBackward(){
         if(mainStack.size>0){
             tempStack.push(mainStack.pop());
-        } else {
+        }
+        if(mainStack.size<0){
             System.out.println("Can not go backward");
         }
     }
